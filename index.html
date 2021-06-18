@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Jeu des paires
+Fichier HTML du TP : 324-TP01_Jquery_Jeu_des_paires
+Didier Bonneau
+Afpa DWWM Créteil maj 29-07-2020
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple jeu des paires</title>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"-->
+    <link rel="icon" href="#">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Jeu des paires</h1>
+    <br>
+    <div id="jeux">
+        <div id="infos">
+            <label for="idChoix" class="label">Chosissez vos images</label>
+            <select class="btn" id="idChoix" onchange="jouer()">
+                <option value="01">Chats</option>
+                <option value="02">Lapins</option>
+                <option value="03">Objets de cuisine</option>
+            </select>
+            <br>
+
+            <label for="idRejouer" class="label">Rejouer </label>
+            <input type="button" class="btn" id="idRejouer" value="Rejouer" onclick="jouer()">
+            <br>
+            <fieldset>
+                <label for="idNbrPaire" class="label">Nombre de paires trouvées </label>
+                <input type="text" class="info" id="idNbrPaire" readonly="">
+                <label for="idNbrEssai" class="label">Nombre d'essais effectués </label>
+                <input type="text" class="info" id="idNbrEssai" readonly="">
+            </fieldset>
+        </div>
+        <div id="container"></div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+    <script src="js/jeu.js"></script>
+</body>
+
+</html>
